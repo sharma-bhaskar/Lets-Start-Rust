@@ -1,7 +1,6 @@
 use std::io;
+#[allow(dead_code, unused_variables)]
 
-#[allow(unused_variables)]
-#[warn(unused_variables)]
 /// Crate comment.
 /// Start learning the Rust from the begining
 ///   /*
@@ -14,6 +13,7 @@ use std::io;
 // 5. cargo run - to run the program
 // */
 fn main() {
+
     // user_input();
     // print_ways();
     // variable_read();
@@ -22,11 +22,21 @@ fn main() {
 }
 
 fn read_string() {
+    //String slice are immutable
     let cat: &str = "Fluffy";
-    println!("{}",cat);
-    let cat: &'static str = "Fluffy";
+    println!("{}", cat);
+    let _dog = String::new();
+    let mut dog = String::from("Max");
+    println!("{}", dog);
+    let owener = format!("Hi my name {} and owner of {} ","Mark",dog);
+    println!( "{}",owener);
+    println!( "{}",owener.len());
+    dog.push(' ');
+    dog.push_str("the dog");
+    println!("{}",dog)
 }
 
+#[allow(dead_code)]
 fn check_even_odd() {
     let number = 25;
 
@@ -37,32 +47,34 @@ fn check_even_odd() {
     }
 }
 
+#[allow(dead_code)]
 fn variable_read() {
     //Varibale
     // let is immutable variable
     // Rust is strongly typed language
-    let name = "Alex"; // immutable variable
-    let age = 27;
-    let amount: i64 = 672637363746;
-    let color = "Red";
+    let _name = "Alex"; // immutable variable
+    let _age = 27;
+    let _amount: i64 = 672637363746;
+    let _color = "Red";
     let color = "Blue"; // this is shadow variables
 
     println!("color {}", color);
 
 
-    let (a, b, c) = (23, "njn", 99);
+    let (_a, _b, _c) = (23, "njn", 99);
 
     let million = 1_000_000;
     println!("{}", million);
 
     let is_day = true;
-    let is_night = false;
+    let _is_night = false;
     println!("{}", is_day);
 
     let char1 = 'A';
     println!("{}", char1);
 }
 
+#[allow(dead_code)]
 fn print_ways() {
     /*
    numbers of way to print
@@ -80,6 +92,7 @@ fn print_ways() {
     println!("Array: {:?}", [1, 2, 3]);
 }
 
+#[allow(dead_code)]
 fn user_input() {
     let mut input = String::new();
 
