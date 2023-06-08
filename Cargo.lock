@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "Lets-Start-Rust"
+name = "lets_start_rust"
 version = "0.1.0"
